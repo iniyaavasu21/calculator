@@ -1,0 +1,148 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background:
+    radial-gradient(circle at top left, #29215b, transparent 40%),
+    linear-gradient(135deg, #10101c, #17172b, #090912);
+}
+
+.calculator {
+  width: 100%;
+  max-width: 390px;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(30, 30, 52, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.logo {
+  font-size: 28px;
+  color: #a78bfa;
+}
+
+.heading h2 {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin: 8px 0;
+}
+
+.heading p {
+  color: #9292aa;
+  font-size: 12px;
+}
+
+.display {
+  height: 125px;
+  background: #11111e;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.previous {
+  color: #9999b0;
+  font-size: 16px;
+  min-height: 23px;
+}
+
+.current {
+  color: white;
+  font-size: clamp(28px, 8vw, 38px);
+  font-weight: 600;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.buttons button {
+  height: 65px;
+  border: none;
+  border-radius: 17px;
+  background: #292940;
+  color: white;
+  font-size: 21px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buttons button:hover {
+  background: #41415e;
+  transform: translateY(-3px);
+}
+
+.buttons button:active {
+  transform: scale(0.94);
+}
+
+.buttons .operator {
+  background: #493c79;
+  color: #c4b5fd;
+}
+
+.buttons .special {
+  background: #39334e;
+  color: #d6c8ff;
+}
+
+.buttons .equal {
+  background: linear-gradient(135deg, #9b72f5, #7044d9);
+  color: white;
+  grid-column: span 2;
+}
+
+.buttons .zero {
+  grid-column: span 2;
+}
+
+footer {
+  text-align: center;
+  color: #77778f;
+  font-size: 11px;
+  margin-top: 24px;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    padding: 20px;
+  }
+
+  .buttons {
+    gap: 9px;
+  }
+
+  .buttons button {
+    height: 58px;
+  }
+}
